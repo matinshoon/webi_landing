@@ -2,140 +2,759 @@
 
 $color-bg          : #282828;
 $color-text        : #FEFEFD;
+$font-family       : "Yekan bakh";
 // $color-primary: ;
 // $color-secondary: ;
 
-$position-absolute : absolute;
+@font-face {
+    font-family: "Yekan Bakh";
+    src        : url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.eot");
+    src        : url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.woff") format("woff"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.svg#Yekan Bakh") format("svg");
+}
 
 body {
     background-color: $color-bg;
-    font-family     : "Yekan Bakh";
+    font-family     : $font-family;
     color           : $color-text;
-}
-
-h1 {
-    font-size: 5vw;
-}
-
-h2 {
-    font-size: 1.5vw;
-}
-
-p {
-    font-size: 1.2vw;
-}
-
-a {
-    font-size      : .8vw;
-    text-decoration: none;
-    color          : $color-text;
+    width           : 100%;
+    height          : 100vh;
+    text-align      : right;
 }
 
 // end non-responsive main page settings
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {...}
+// Button Styles
 
+.btn {
+    font-size    : .8vw;
+    background   : rgba(255, 255, 255, 0.35);
+    border       : none;
+    border-radius: 6px;
+    color        : $color-text;
+    font-family  : $font-family;
+    padding      : 0px 30px;
+    height       : 5vh;
+    cursor       : pointer;
+
+    &:hover {
+
+        transition   : .5s;
+        border-radius: 10px;
+        box-shadow   : 0px 0px 40px rgba(192, 192, 192, 0.302);
+    }
+
+    &:active {
+        transition: .1s;
+        background: rgb(255, 255, 255);
+        color     : $color-bg;
+    }
+}
+
+// end Button Styles
+
+.centerlize-txt {
+    align-self: center !important;
+    text-align: center;
+}
 
 // /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 375px) and (max-width: 600px) {
 
-// /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {...}
-
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-    //  mixin Styles
-    @mixin line-sm {
-        .moreInfoLine-sm {
-            display        : flex;
-            position       : absolute;
-            align-self     : flex-end;
-            margin-right   : 10px;
-            margin-bottom  : 10px;
-            bottom         : 10px;
-            justify-content: center;
-            align-items    : center;
-            cursor         : pointer;
-
-            .line {
-                margin-left: 10px;
-                width      : 40px;
-                height     : 0px;
-                border     : 1px solid $color-text;
-            }
-
-            &:hover {
-                .line {
-                    transition : 500ms;
-                    margin-left: 20px;
-                }
-            }
-        }
+    h1 {
+        font-size: 10vw;
     }
 
-    @mixin headline($positions) {
-        .headline-text {
-            position: $positions;
-            margin  : 110px 10px;
-
-            .headliner {
-                margin-bottom: 20px;
-            }
-
-        }
+    h2 {
+        font-size: 3vw;
     }
 
-    // end mixin Styles
+    h3 {
+        font-size: 4vw;
+    }
 
-    // Page settings
-    * {
-        margin    : 0;
-        padding   : 0;
-        box-sizing: border-box;
+    p {
+        font-size: 3vw;
+    }
+
+    a {
+        font-size      : .8vw;
+        text-decoration: none;
+        color          : $color-text;
+    }
+
+    .btn {
+        margin-top: 15%;
+        font-size : 3vw;
     }
 
     body {
-        width         : 100%;
-        height        : 100vh;
+        background-image   : url("../css/images/blured-bg.png");
+        background-repeat  : repeat;
+        background-position: 100% 100%;
+        height             : 200vh;
+        /* Fallback for browsers that do not support Custom Properties */
+        height             : calc(var(--vh, 1vh) * 200);
+    }
+
+    header {
+        .sidenav {
+            color          : $color-text;
+            background     : radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.71) 0%, rgba(0, 0, 0, 0.35) 100%);
+            border-right   : 1px solid #ffffff20;
+            backdrop-filter: blur(50px);
+            flex-direction : row;
+            display        : flex;
+            height         : 8% !important;
+            width          : 100%;
+
+            .main-menu {
+                display        : flex;
+                margin-left    : 2%;
+                flex-direction : column;
+                justify-content: flex-start;
+                align-self     : center;
+
+                a {
+                    &:hover {
+                        transition: 500ms;
+                        color     : #7d7d7d;
+                    }
+                }
+
+
+            }
+
+            .menu-logo {
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+                height         : 90%;
+
+                .logo-side {
+                    max-height: 50px;
+                    max-width : 10% !important;
+                    width     : auto;
+                    height    : auto;
+                    position  : absolute;
+                    top       : 0;
+                    bottom    : 0;
+                    left      : 0;
+                    right     : 0;
+                    margin    : auto;
+                }
+            }
+
+        }
+    }
+
+    section {
         display       : flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
+        height        : 100vh;
     }
 
-    // end Page settings
+    .firstPage {
+        height           : 100%;
+        width            : 100%;
+        background-image : url("../css/images/lg-blured-circle.png");
+        background-repeat: repeat;
+        background-size  : cover;
+        display          : flex;
+        flex-direction   : column;
+    }
+
+    .fP-left-section {
+        height: 30% !important;
+        order : 2;
+
+        .fP-left-up {
+            display: none;
+        }
+
+        .fP-left-down {
+            width : 100%;
+            height: 100% !important;
+
+            a {
+                display: none;
+            }
+
+            .fpld-right {
+                justify-content: center;
+                border-left    : 1px solid #fefefd33;
+                justify-content: center;
+                align-items    : center;
+            }
+
+            .fpld-left {
+                justify-content: center;
+                justify-content: center;
+                align-items    : center;
+
+            }
+        }
+    }
 
 
-    // Button Styles
+    .fP-right-section {
+        order : 1;
+        height: 70%;
+
+
+        .fP-right-up {
+            margin-top     : 15%;
+            order          : 1;
+            justify-content: center;
+            display        : flex;
+            width          : 100%;
+            height         : 60%;
+        }
+
+        .fP-right-down {
+            order : 2;
+            width : 100%;
+            height: 40%;
+            background-image: url("../css/images//bg.gif");
+            background-size    : cover;
+            background-repeat  : no-repeat;
+            background-position: 15%;
+
+            .moreInfoLine-sm {
+                display: none;
+            }
+
+            .fprd-right {
+
+                display: none !important;
+
+                .gg-corner-right-icon {
+                    display: none;
+                }
+            }
+
+            .fprd-left {
+
+                backdrop-filter        : blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                width                  : 100% !important;
+                display                : flex;
+                justify-content        : center;
+                align-items            : center;
+
+
+            }
+        }
+    }
+
+    .secondPage {
+        height          : 50%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+    }
+
+    .sP-left-section {
+        width            : 100%;
+        height           : 100%;
+        background-image : url("../css/images/white-bg.png");
+        background-repeat: no-repeat;
+        background-size  : cover;
+
+        .sP-BG {
+            height       : 70vh !important;
+            width        : 100%;
+            align-items  : flex-end !important;
+            margin-bottom: 15%;
+        }
+
+        .Wcheck1 {
+            max-height: 50%;
+            max-width : 50%;
+            width     : auto;
+            height    : auto;
+
+        }
+    }
+
+    .sP-right-section-sm {
+        margin-top: 50%;
+        position  : absolute;
+        color     : $color-bg;
+        width     : 100%;
+
+
+        p {
+            display        : flex;
+            justify-content: center;
+            margin-bottom  : 20%;
+        }
+
+        .secondPage-btn-sm {
+            width: 100%;
+
+            .btn-sm {
+                margin-right : 30%;
+                background   : none;
+                border       : none;
+                border-radius: 0%;
+                border-bottom: 2px solid $color-bg;
+            }
+        }
+
+    }
+
+    .sP-right-section {
+        display: none;
+
+        .centerlize {
+            display: none;
+
+
+            h1 {
+                display: none;
+
+            }
+
+            p {
+                display: none;
+
+            }
+
+            .btn {
+                display: none;
+
+            }
+        }
+    }
+
+    .thirdPage {
+        height          : 100vh;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+
+
+        div {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            text-align     : center;
+        }
+
+        svg {
+            width : 80px;
+            height: 80px;
+        }
+
+        .bg-img {
+            background-image : url("../css/images/main-pic.png");
+            background-repeat: no-repeat;
+            background-size  : cover;
+            border           : 0.01px solid #ffffff12;
+            flex-grow        : 1;
+            width            : 27.5%;
+            height           : 100%;
+        }
+
+        .bg-icon-lg {
+            background-image: url("../css/images/blured-bg.png");
+            border          : 0.01px solid #ffffff12;
+            width           : 45%;
+            height          : 100%;
+        }
+
+        .bg-icon-sm {
+            background-image: url("../css/images/blured-bg.png");
+            border          : 0.01px solid #ffffff12;
+            width           : 27.5%;
+            height          : 100%;
+        }
+    }
+
+    .thirdPage-first-row {
+        width : 100%;
+        height: 33.33%;
+    }
+
+
+    .thirdPage-second-row {
+        width : 100%;
+        height: 33.33%;
+    }
+
+
+
+    .thirdPage-third-row {
+        width : 100%;
+        height: 33.33%;
+    }
+}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: 7vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    a {
+        font-size      : 5vw;
+        text-decoration: none;
+        color          : $color-text;
+    }
+
     .btn {
-        font-size    : .8vw;
-        background   : rgba(255, 255, 255, 0.35);
-        border       : none;
-        border-radius: 6px;
-        color        : $color-text;
-        font-family  : "Yekan Bakh";
-        padding      : 0px 30px;
-        height       : 5vh;
-        cursor       : pointer;
+        margin-top: 15%;
+        font-size : 3vw;
+    }
 
-        &:hover {
 
-            transition   : .5s;
-            border-radius: 10px;
-            box-shadow   : 0px 0px 40px rgba(192, 192, 192, 0.302);
-        }
+    body {
+        background-image   : url("../css/images/blured-bg.png");
+        background-repeat  : repeat;
+        background-position: 100% 100%;
+        height             : 100vh;
+        /* Fallback for browsers that do not support Custom Properties */
+        height             : calc(var(--vh, 1vh) * 200);
+    }
 
-        &:active {
-            transition: .1s;
-            background: rgb(255, 255, 255);
-            color     : $color-bg;
+    header {
+        .sidenav {
+            color          : $color-text;
+            background     : radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.71) 0%, rgba(0, 0, 0, 0.35) 100%);
+            border-right   : 1px solid #ffffff20;
+            backdrop-filter: blur(50px);
+            flex-direction : row;
+            display        : flex;
+            height         : 8% !important;
+            width          : 100%;
+
+            .main-menu {
+                display        : flex;
+                margin-left    : 2%;
+                flex-direction : column;
+                justify-content: flex-start;
+                align-self     : center;
+
+                a {
+                    &:hover {
+                        transition: 500ms;
+                        color     : #7d7d7d;
+                    }
+                }
+
+
+            }
+
+            .menu-logo {
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+                height         : 90%;
+
+                .logo-side {
+                    max-height: 50px;
+                    max-width : 10% !important;
+                    width     : auto;
+                    height    : auto;
+                    position  : absolute;
+                    top       : 0;
+                    bottom    : 0;
+                    left      : 0;
+                    right     : 0;
+                    margin    : auto;
+                }
+            }
+
         }
     }
 
-    // end Button Styles
+    section {
+        display       : flex;
+        flex-direction: column;
+        height        : 100%;
+    }
+
+    .firstPage {
+        height           : 100%;
+        width            : 100%;
+        background-image : url("../css/images/lg-blured-circle.png");
+        background-repeat: repeat;
+        background-size  : cover;
+        display          : flex;
+        flex-direction   : column;
+    }
+
+    .fP-left-section {
+        height: 50% !important;
+        order : 2;
+
+        .fP-left-up {
+            display: none;
+        }
+
+        .fP-left-down {
+            width : 100%;
+            height: 100%;
+
+            a {
+                display: none;
+            }
+
+            .fpld-right {
+                justify-content: center;
+                border-left    : 1px solid #fefefd33;
+                justify-content: center;
+                align-items    : center;
+                margin-top     : 10%;
+                margin-bottom  : 10%;
+            }
+
+            .fpld-left {
+                justify-content: center;
+                justify-content: center;
+                align-items    : center;
+                margin-top     : 10%;
+                margin-bottom  : 10%;
+
+            }
+        }
+    }
+
+
+    .fP-right-section {
+        order : 1;
+        height: 65%;
+
+
+        .fP-right-up {
+            margin-top     : 30%;
+            margin-bottom  : 25%;
+            font-weight    : bold;
+            order          : 1;
+            justify-content: center;
+            display        : flex;
+            width          : 100%;
+            height         : 0%;
+        }
+
+        .fP-right-down {
+            order : 2;
+            width : 100%;
+            height: 40%;
+
+            background-image   : url("../css/images/main-pic.png");
+            background-size    : cover;
+            background-repeat  : no-repeat;
+            background-position: 15%;
+
+            .moreInfoLine-sm {
+                display: none;
+            }
+
+            .fprd-right {
+
+                display: none !important;
+
+                .gg-corner-right-icon {
+                    display: none;
+                }
+            }
+
+            .fprd-left {
+                width          : 100% !important;
+                margin-top     : 10%;
+                margin-bottom  : 10%;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+
+            }
+        }
+    }
+
+    .secondPage {
+        height          : 70%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+    }
+
+    .sP-left-section {
+        width            : 100%;
+        height           : 100%;
+        background-image : url("../css/images/white-bg.png");
+        background-repeat: no-repeat;
+        background-size  : cover;
+
+        .sP-BG {
+            height     : 90vh;
+            width      : 100%;
+            align-items: flex-end !important;
+        }
+
+        .Wcheck1 {
+            max-height: 70%;
+            max-width : 70%;
+            width     : auto;
+            height    : auto;
+
+        }
+    }
+
+    .sP-right-section-sm {
+        margin-top: 10%;
+        position  : absolute;
+        color     : $color-bg;
+        width     : 100%;
+
+        p {
+            display        : flex;
+            justify-content: center;
+            margin-bottom  : 20%;
+        }
+
+        .secondPage-btn-sm {
+            width: 100%;
+
+            .btn-sm {
+                margin-right : 30%;
+                background   : none;
+                border       : none;
+                border-radius: 0%;
+                border-bottom: 2px solid $color-bg;
+            }
+        }
+
+    }
+
+    .sP-right-section {
+        display: none;
+
+
+        .centerlize {
+            display: none;
+
+            h1 {
+                display: none;
+
+            }
+
+            p {
+                display: none;
+
+            }
+
+            .btn {
+                display: none;
+
+            }
+        }
+    }
+
+
+    .thirdPage {
+        height          : 100vh;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+
+
+        div {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            text-align     : center;
+        }
+
+        .bg-img {
+            background-image : url("../css/images/main-pic.png");
+            background-repeat: no-repeat;
+            background-size  : cover;
+            border           : 0.01px solid #ffffff12;
+            flex-grow        : 1;
+            width            : 27.5%;
+            height           : 100%;
+        }
+
+        .bg-icon-lg {
+            background-image: url("../css/images/blured-bg.png");
+            border          : 0.01px solid #ffffff12;
+            width           : 45%;
+            height          : 100%;
+        }
+
+        .bg-icon-sm {
+            background-image: url("../css/images/blured-bg.png");
+            border          : 0.01px solid #ffffff12;
+            width           : 27.5%;
+            height          : 100%;
+        }
+    }
+
+    .thirdPage-first-row {
+        width : 100%;
+        height: 33.33%;
+    }
+
+
+    .thirdPage-second-row {
+        width : 100%;
+        height: 33.33%;
+    }
+
+
+
+    .thirdPage-third-row {
+        width : 100%;
+        height: 33.33%;
+    }
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 993px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    h3 {
+        font-size: 2vw;
+    }
+
+    p {
+        font-size: 1.2vw;
+    }
+
+    a {
+        text-decoration: none;
+        color          : $color-text;
+    }
+
+    body {
+        height        : 100vh;
+        width         : 100%;
+        display       : flex;
+        flex-direction: column;
+    }
+
+    section {
+        height          : 100vh;
+        padding-left    : 6%;
+        background-image: url("../css/images/lg-blured-circle.png");
+    }
 
 
     header {
@@ -143,23 +762,32 @@ a {
         display: flex;
 
         .sidenav {
-            color             : $color-text;
-            background        : radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.71) 0%, rgba(0, 0, 0, 0.35) 100%);
+            display        : flex;
+            color          : $color-text;
+            background     : radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.71) 0%, rgba(0, 0, 0, 0.35) 100%);
             border-right   : 1px solid #ffffff20;
-            backdrop-filter   : blur(50px);
-            position          : fixed;
-            display           : flex;
-            flex-direction    : column;
-            display           : flex;
-            justify-content   : center;
-            align-items       : center;
-            width             : 6%;
-            height            : 100%;
+            backdrop-filter: blur(50px);
+            flex-direction : column;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            height         : 100%;
+            width          : 6%;
 
             .main-menu {
                 display        : flex;
                 flex-direction : column;
                 justify-content: center;
+                height         : 10%;
+
+                a {
+                    &:hover {
+                        transition: 500ms;
+                        color     : #7d7d7d;
+                    }
+                }
+
+
             }
 
             .menu-logo {
@@ -185,66 +813,128 @@ a {
         }
     }
 
-    .container {
-        width           : 94%;
-        background-image: url("../css/images/blured-bg.png");
-
-    }
-
     .firstPage {
-        width         : 100%;
-        height        : 100%;
-        display       : flex;
-        flex-direction: row-reverse;
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
     }
 
-    .section-right-firstPage {
-        display            : flex;
-        justify-content    : center;
-        align-items        : center;
-        flex-direction     : column;
-        width              : 40%;
-        height             : 100%;
-        background-image   : url("../css/images/lg-blured-circle.png");
-        background-repeat  : no-repeat;
-        background-position: 10% -150%;
+    .fP-left-section {
+        width: 60% !important;
 
-        > :nth-child(1) {
-            display        : flex;
-            justify-content: center;
-            align-items    : center;
-            color          : $color-text;
-            width          : 100%;
-            height         : 66%;
 
-            .firstPage-btn {
-                width      : 90%;
-                padding-top: 70px;
-                text-align : center;
+        .fP-left-up {
+            background-image : url("../css/images//bg.gif");
+            background-repeat: no-repeat;
+            background-size  : cover;
+            justify-content  : center;
+            display          : flex;
+            width            : 100%;
+            height           : 70%;
 
-                > :nth-child(1) {
-                    margin-left: 30px;
-                }
+            .bg-img {
+                width                  : 100%;
+                height                 : 100%;
+                backdrop-filter        : blur(10px);
+                -webkit-backdrop-filter: blur(10px);
             }
 
-            h1 {
-                text-align: center;
+            .logo-per {
+                position    : absolute;
+                justify-self: center;
+                align-self  : center;
             }
         }
 
-        > :nth-child(2) {
-            display: flex;
-
-            color : $color-text;
+        .fP-left-down {
             width : 100%;
-            height: 34%;
+            height: 30%;
 
-            > :nth-child(1) {
-                width          : 35%;
-                height         : 100%;
+            .moreInfoLine-sm {
                 display        : flex;
-                justify-content: center;
                 align-items    : center;
+                margin-right   : 10px;
+                margin-bottom  : 10px;
+                cursor         : pointer;
+                color          : $color-text;
+                text-decoration: none;
+
+                .line {
+                    margin-left: 10px;
+                    width      : 40px;
+                    height     : 0px;
+                    border     : 1px solid $color-text;
+                }
+
+                &:hover {
+                    .line {
+                        transition : 500ms;
+                        margin-left: 20px;
+                        width      : 60px;
+                    }
+                }
+            }
+
+            .fpld-left {
+                background-image   : url("../css/images/sm-blured-circle.png");
+                background-repeat  : no-repeat;
+                background-position: 70% 100%;
+
+            }
+        }
+    }
+
+
+    .fP-right-section {
+        width: 40% !important;
+
+
+        .fP-right-up {
+            background-image   : url("../css/images/lg-blured-circle.png");
+            background-repeat  : no-repeat;
+            background-position: 100% 100%;
+            justify-content    : center;
+            display            : flex;
+            width              : 100%;
+            height             : 70%;
+            text-align         : center;
+
+            .btn {
+                margin-top: 25%;
+            }
+        }
+
+        .fP-right-down {
+            width : 100%;
+            height: 30%;
+
+            .moreInfoLine-sm {
+                display        : flex;
+                align-items    : center;
+                margin-right   : 10px;
+                margin-bottom  : 10px;
+                cursor         : pointer;
+                color          : $color-text;
+                text-decoration: none;
+
+                .line {
+                    margin-left: 10px;
+                    width      : 40px;
+                    height     : 0px;
+                    border     : 1px solid $color-text;
+                }
+
+                &:hover {
+                    .line {
+                        transition : 500ms;
+                        margin-left: 20px;
+                        width      : 60px;
+                    }
+                }
+            }
+
+            .fprd-right {
+                width: 100%;
 
                 .gg-corner-right-icon {
                     -webkit-animation: action 2s infinite alternate;
@@ -272,166 +962,126 @@ a {
                 }
             }
 
-            > :nth-child(2) {
-                width : 65%;
-                height: 100%;
-
-                @include line-sm();
-                @include headline($position-absolute);
-
-                .moreInfoLine-sm {
-                    bottom: -125px;
-                }
-
-                .bg-img {
-                    z-index          : -1;
-                    width            : 100%;
-                    height           : 100%;
-                    background-repeat: no-repeat;
-                    background-size  : cover;
-                }
+            .fprd-left {
+                background-image   : url("../css/images/main-pic.png");
+                background-size    : cover;
+                background-repeat  : no-repeat;
+                background-position: 15%;
             }
         }
     }
 
-
-    .section-left-firstPage {
-        border-right   : 1px solid #ffffff20;
-        left  : 0px;
-        top   : 0px;
-        width : 60%;
-        height: 100%;
-
-        > :nth-child(1) {
-            display        : flex;
-            height         : 66%;
-            color          : $color-text;
-            justify-content: center;
-
-            .logo-per {
-                display   : flex;
-                position  : absolute;
-                align-self: center;
-                width     : 405px;
-                height    : 201px;
-            }
-
-            .bg-img {
-                z-index          : -1;
-                width            : 100%;
-                height           : 100%;
-                background-repeat: no-repeat;
-                background-size  : cover;
-            }
-        }
-
-        > :nth-child(2) {
-            display            : flex;
-            color              : $color-text;
-            width              : 100%;
-            background-image   : url("../css/images/sm-blured-circle.png");
-            background-size    : contain;
-            background-repeat  : no-repeat;
-            background-position: 15%;
-
-            > :nth-child(1) {
-                @include line-sm();
-                @include headline(none);
-            }
-
-            > :nth-child(2) {
-                width: 500px;
-                @include line-sm();
-                @include headline(none);
-            }
-        }
-    }
 
     .secondPage {
-        width         : 100%;
-        height        : 100%;
-        display       : flex;
-        flex-direction: row-reverse;
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
     }
 
-    .section-left-secondPage {
-        box-sizing       : border-box;
-        left             : 0px;
-        top              : 0px;
-        display          : inline-block;
-        position         : relative;
+    .sP-left-section {
         width            : 60%;
         height           : 100%;
         background-image : url("../css/images/white-bg.png");
         background-repeat: no-repeat;
         background-size  : cover;
 
+        .sP-BG {
+            height: 100vh;
+            width : 100%;
+        }
+
         .Wcheck1 {
             max-height: 100%;
             max-width : 100%;
             width     : auto;
             height    : auto;
-            position  : absolute;
-            top       : 0;
-            bottom    : 0;
-            left      : 0;
-            right     : 0;
-            margin    : auto;
+            -webkit-animation: action 3s infinite alternate;
+            animation        : action 3s infinite alternate;
+
+            @-webkit-keyframes action {
+                0% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(20px);
+                }
+            }
+
+            @keyframes action {
+                0% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(20px);
+                }
+            }
         }
     }
 
-    .section-right-secondPage {
-        display        : flex;
-        flex-direction : column;
-        justify-content: center;
-        align-items    : center;
-        color          : $color-text;
-        width          : 40%;
-        height         : 100%;
+    .sP-right-section {
+        width               : 40%;
+        // height           : 100%;
+        background-image    : url("../css/images/lg-blured-circle-white.png");
+        background-repeat   : no-repeat;
+        background-size     : cover;
 
+        .centerlize {
+            width          : 100%;
+            display        : flex;
+            flex-direction : column;
+            text-align     : center;
+            justify-content: center;
+            align-self     : center;
 
-        // box-sizing         : border-box;
-        // left               : 0px;
-        // top                : 0px;
-        // display            : inline-block;
-        // position           : relative;
-        // width              : 40%;
-        // height             : 100%;
-        background-image   : url("../css/images/lg-blured-circle.png");
-        background-repeat  : no-repeat;
-        background-position: 10% -150%;
+            h1 {
+                margin-bottom: 10%;
+            }
+
+            p {
+                margin-bottom: 10%;
+            }
+        }
+    }
+
+    .sP-right-section-sm {
+        display: none;
 
         h1 {
-            text-align: center;
+            display: none;
+
         }
 
         p {
-            margin-top   : 70px;
-            margin-bottom: 70px;
+            display: none;
+
         }
 
-        .secondPage-btn {
-            width     : 90%;
-            text-align: center;
+        .secondPage-btn-sm {
+            display: none;
 
-            > :nth-child(1) {
-                margin-left: 30px;
+            width: 100%;
+
+            .btn-sm {
+                display: none;
+
+                margin-right : 30%;
+                background   : none;
+                border       : none;
+                border-radius: 0%;
+                border-bottom: 2px solid $color-bg;
             }
-
         }
-
 
     }
 
+
     .thirdPage {
-        width              : 100%;
-        height             : 100%;
-        display            : flex;
-        flex-direction     : column;
-        background-image   : url("../css/images/lg-blured-circle.png");
-        backdrop-filter    : blur(50px);
-        background-repeat  : no-repeat;
-        background-position: 120% -100%;
+        height          : 100vh;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+
 
         div {
             display        : flex;
@@ -441,11 +1091,25 @@ a {
         }
 
         .bg-img {
-            background-image: url("../css/images/main-pic.png");
-            background-repeat  : no-repeat;background-size: cover;
-            border          : 0.01px solid #ffffff12;
-            flex-grow       : 1;
-            height          : 100%;
+            background-image : url("../css/images/main-pic.png");
+            background-repeat: no-repeat;
+            background-size  : cover;
+            border           : 0.01px solid #ffffff12;
+            flex-grow        : 1;
+            width            : 27.5%;
+            height           : 100%;
+
+                &:hover {
+                    background-image: none;
+                    background: #fff;
+                    text-shadow: $color-text 10px;
+                    transition: 500ms;
+                    text-decoration: none;
+                    a {
+                        color: #51869b;
+                        text-decoration: none;
+                    }
+                }
         }
 
         .bg-icon-lg {
@@ -456,7 +1120,7 @@ a {
         }
 
         .bg-icon-sm {
-            background-image: url("../css/images/blured-bg.png");
+            // background-image: url("../css/images/blured-bg.png");
             border          : 0.01px solid #ffffff12;
             width           : 27.5%;
             height          : 100%;
@@ -464,28 +1128,20 @@ a {
     }
 
     .thirdPage-first-row {
-        display       : flex;
-        flex-direction: row;
-        width         : 100%;
-        height        : 33.33%;
+        width : 100%;
+        height: 33.33%;
     }
 
 
     .thirdPage-second-row {
-        display       : flex;
-        flex-direction: row-reverse;
-        width         : 100%;
-        height        : 33.33%;
+        width : 100%;
+        height: 33.33%;
     }
 
 
 
     .thirdPage-third-row {
-        display       : flex;
-        flex-direction: row-reverse;
-        width         : 100%;
-        height        : 33.33%;
+        width : 100%;
+        height: 33.33%;
     }
-
-
 }
