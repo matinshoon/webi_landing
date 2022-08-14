@@ -12,7 +12,11 @@ $color-primary     : #51869b;
     src        : url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.woff") format("woff"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/41e49eab42867016423011dccc96c22a.svg#Yekan Bakh") format("svg");
 }
 
-@font-face {font-family: "Yekan Bakh"; src: url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.eot"); src: url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.woff") format("woff"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.svg#Yekan Bakh Medium") format("svg"); }
+@font-face {
+    font-family: "Yekan Bakh";
+    src        : url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.eot");
+    src        : url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.woff") format("woff"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b4970ca649486b095a2e59e0cb7c7663.svg#Yekan Bakh Medium") format("svg");
+}
 
 body {
     background-color: $color-bg;
@@ -114,17 +118,17 @@ b {
             width          : 100%;
 
             svg {
-                width: 70%;
+                width : 70%;
                 height: 70%;
             }
 
             .menu-main {
-                width: 15%;
+                width          : 15%;
                 height         : 100%;
-                order: 1;
+                order          : 1;
                 display        : flex;
                 justify-content: center;
-                align-items     : center;
+                align-items    : center;
 
                 a {
                     &:hover {
@@ -135,12 +139,12 @@ b {
             }
 
             .menu-support {
-                width: 15%;
+                width          : 15%;
                 height         : 100%;
-                order: 3;
+                order          : 3;
                 display        : flex;
                 justify-content: center;
-                align-items     : center;
+                align-items    : center;
 
                 a {
                     &:hover {
@@ -151,8 +155,8 @@ b {
             }
 
             .menu-logo {
-                width: 70%;
-                order: 2;
+                width          : 70%;
+                order          : 2;
                 display        : flex;
                 flex-direction : column;
                 justify-content: center;
@@ -273,20 +277,21 @@ b {
         }
     }
 
-    .secondPage {
+    // webi check section 
+    .WcheckSection {
         height          : 100%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
     }
 
-    .sP-left-section {
+    .Wcsleft-section {
         width            : 100%;
         height           : 100%;
         background-image : url("../css/images/white-bg.png");
         background-repeat: no-repeat;
         background-size  : cover;
 
-        .sP-BG {
+        .WcsBG {
             height       : 70vh !important;
             width        : 100%;
             align-items  : flex-end !important;
@@ -302,7 +307,7 @@ b {
         }
     }
 
-    .sP-right-section-sm {
+    .Wcsright-section-sm {
         margin-top: 20%;
         position  : absolute;
         color     : $color-bg;
@@ -315,7 +320,7 @@ b {
             margin-bottom  : 20%;
         }
 
-        .secondPage-btn-sm {
+        .WcheckSection-btn-sm {
             width: 100%;
 
             .btn-sm {
@@ -329,7 +334,7 @@ b {
 
     }
 
-    .sP-right-section {
+    .Wcsright-section {
         display: none;
 
         .centerlize {
@@ -353,7 +358,95 @@ b {
         }
     }
 
-    .thirdPage {
+    // webi learn section 
+
+
+    .WlearnSection {
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+    }
+
+    .Wlsleft-section {
+        width            : 100%;
+        height           : 100%;
+        background-image : url("../css/images/main-pic.png");
+        background-repeat: no-repeat;
+        background-size  : cover;
+
+        .WlsBG {
+            height       : 70vh !important;
+            width        : 100%;
+            align-items  : flex-end !important;
+            margin-bottom: 10%;
+        }
+
+        .Wcheck1 {
+            max-height: 50%;
+            max-width : 50%;
+            width     : auto;
+            height    : auto;
+
+        }
+    }
+
+    .Wlsright-section-sm {
+        margin-top: 20%;
+        position  : absolute;
+        color     : $color-text;
+        width     : 100%;
+
+
+        p {
+            display        : flex;
+            justify-content: center;
+            margin-bottom  : 20%;
+        }
+
+        .WlearnSection-btn-sm {
+            width: 100%;
+
+
+            .btn-sm {
+                color        : $color-text;
+                width        : 100%;
+                background   : none;
+                border       : none;
+                border-radius: 0%;
+                border-bottom: 2px solid $color-text;
+            }
+        }
+
+    }
+
+    .Wlsright-section {
+        display: none;
+
+        .centerlize {
+            display: none;
+
+
+            h1 {
+                display: none;
+
+            }
+
+            p {
+                display: none;
+
+            }
+
+            .btn {
+                display: none;
+
+            }
+        }
+    }
+
+
+
+
+    .portfolioSection {
         height          : 100vh;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
@@ -396,20 +489,20 @@ b {
         }
     }
 
-    .thirdPage-first-row {
+    .portfolioSection-first-row {
         width : 100%;
         height: 33.33%;
     }
 
 
-    .thirdPage-second-row {
+    .portfolioSection-second-row {
         width : 100%;
         height: 33.33%;
     }
 
 
 
-    .thirdPage-third-row {
+    .portfolioSection-third-row {
         width : 100%;
         height: 33.33%;
     }
@@ -467,12 +560,12 @@ b {
             width          : 100%;
 
             .menu-main {
-                width: 15%;
+                width          : 15%;
                 height         : 100%;
-                order: 1;
+                order          : 1;
                 display        : flex;
                 justify-content: center;
-                align-items     : center;
+                align-items    : center;
 
                 a {
                     &:hover {
@@ -483,12 +576,12 @@ b {
             }
 
             .menu-support {
-                width: 15%;
+                width          : 15%;
                 height         : 100%;
-                order: 3;
+                order          : 3;
                 display        : flex;
                 justify-content: center;
-                align-items     : center;
+                align-items    : center;
 
                 a {
                     &:hover {
@@ -499,8 +592,8 @@ b {
             }
 
             .menu-logo {
-                width: 70%;
-                order: 2;
+                width          : 70%;
+                order          : 2;
                 display        : flex;
                 flex-direction : column;
                 justify-content: center;
@@ -627,20 +720,21 @@ b {
         }
     }
 
-    .secondPage {
+    // webi check section 
+    .WcheckSection {
         height          : 70%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
     }
 
-    .sP-left-section {
+    .Wcsleft-section {
         width            : 100%;
         height           : 100%;
         background-image : url("../css/images/white-bg.png");
         background-repeat: no-repeat;
         background-size  : cover;
 
-        .sP-BG {
+        .WcsBG {
             height     : 90vh;
             width      : 100%;
             align-items: flex-end !important;
@@ -655,7 +749,7 @@ b {
         }
     }
 
-    .sP-right-section-sm {
+    .Wcsright-section-sm {
         margin-top: 10%;
         position  : absolute;
         color     : $color-bg;
@@ -667,11 +761,10 @@ b {
             margin-bottom  : 20%;
         }
 
-        .secondPage-btn-sm {
+        .WcheckSection-btn-sm {
             width: 100%;
 
             .btn-sm {
-                margin-right : 30%;
                 background   : none;
                 border       : none;
                 border-radius: 0%;
@@ -681,7 +774,88 @@ b {
 
     }
 
-    .sP-right-section {
+    .Wcsright-section {
+        display: none;
+
+
+        .centerlize {
+            display: none;
+
+            h1 {
+                display: none;
+
+            }
+
+            p {
+                display: none;
+
+            }
+
+            .btn {
+                display: none;
+
+            }
+        }
+    }
+
+    // webi learn section 
+
+
+    .WlearnSection {
+        height          : 70%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+    }
+
+    .Wlsleft-section {
+        width            : 100%;
+        height           : 100%;
+        background-image : url("../css/images/main-pic.png");
+        background-repeat: no-repeat;
+        background-size  : cover;
+
+        .WlsBG {
+            height     : 90vh;
+            width      : 100%;
+            align-items: flex-end !important;
+        }
+
+        .Wcheck1 {
+            max-height: 70%;
+            max-width : 70%;
+            width     : auto;
+            height    : auto;
+
+        }
+    }
+
+    .Wlsright-section-sm {
+        margin-top: 10%;
+        position  : absolute;
+        color     : $color-text;
+        width     : 100%;
+
+        p {
+            display        : flex;
+            justify-content: center;
+            margin-bottom  : 20%;
+        }
+
+        .WlearnSection-btn-sm {
+            width: 100%;
+
+            .btn-sm {
+                color        : $color-text;
+                background   : none;
+                border       : none;
+                border-radius: 0%;
+                border-bottom: 2px solid $color-text;
+            }
+        }
+
+    }
+
+    .Wlsright-section {
         display: none;
 
 
@@ -706,7 +880,9 @@ b {
     }
 
 
-    .thirdPage {
+
+
+    .portfolioSection {
         height          : 100vh;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
@@ -744,20 +920,20 @@ b {
         }
     }
 
-    .thirdPage-first-row {
+    .portfolioSection-first-row {
         width : 100%;
         height: 33.33%;
     }
 
 
-    .thirdPage-second-row {
+    .portfolioSection-second-row {
         width : 100%;
         height: 33.33%;
     }
 
 
 
-    .thirdPage-third-row {
+    .portfolioSection-third-row {
         width : 100%;
         height: 33.33%;
     }
@@ -822,6 +998,7 @@ b {
                 flex-direction : column;
                 justify-content: center;
                 height         : 10%;
+
                 a {
                     &:hover {
                         transition: 500ms;
@@ -835,6 +1012,7 @@ b {
                 flex-direction : column;
                 justify-content: center;
                 height         : 10%;
+
                 a {
                     &:hover {
                         transition: 500ms;
@@ -1002,13 +1180,14 @@ b {
     }
 
     .gg-corner {
-        height: 0px;
+        height  : 0px;
         position: sticky;
         top     : 90vh;
 
         .down-right-icon {
             position: relative;
             right   : 80px;
+
             &:hover {
                 color: $color-primary;
             }
@@ -1038,21 +1217,21 @@ b {
         }
     }
 
-
-    .secondPage {
+    // webi check section 
+    .WcheckSection {
         height          : 100%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
     }
 
-    .sP-left-section {
+    .Wcsleft-section {
         width            : 60%;
         height           : 100%;
         background-image : url("../css/images/white-bg.png");
         background-repeat: no-repeat;
         background-size  : cover;
 
-        .sP-BG {
+        .WcsBG {
             height: 100vh;
             width : 100%;
         }
@@ -1087,7 +1266,7 @@ b {
         }
     }
 
-    .sP-right-section {
+    .Wcsright-section {
         width               : 40%;
         // height           : 100%;
         background-image    : url("../css/images/lg-blured-circle-white.png");
@@ -1112,7 +1291,7 @@ b {
         }
     }
 
-    .sP-right-section-sm {
+    .Wcsright-section-sm {
         display: none;
 
         h1 {
@@ -1125,7 +1304,7 @@ b {
 
         }
 
-        .secondPage-btn-sm {
+        .WcheckSection-btn-sm {
             display: none;
 
             width: 100%;
@@ -1143,8 +1322,108 @@ b {
 
     }
 
+    // webi learn section 
+    .WlearnSection {
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+    }
 
-    .thirdPage {
+    .Wlsleft-section {
+        width            : 60%;
+        height           : 100%;
+        background-image : url("../css/images/main-pic.png");
+        background-repeat: no-repeat;
+        background-size  : cover;
+
+        .WlsBG {
+            height: 100vh;
+            width : 100%;
+        }
+
+        .Wcheck1 {
+            max-height       : 100%;
+            max-width        : 100%;
+            width            : auto;
+            height           : auto;
+            -webkit-animation: action 3s infinite alternate;
+            animation        : action 3s infinite alternate;
+
+            @-webkit-keyframes action {
+                0% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(20px);
+                }
+            }
+
+            @keyframes action {
+                0% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(20px);
+                }
+            }
+        }
+    }
+
+    .Wlsright-section {
+        width: 40%;
+
+        .centerlize {
+            width          : 100%;
+            display        : flex;
+            flex-direction : column;
+            text-align     : center;
+            justify-content: center;
+            align-self     : center;
+
+            h1 {
+                margin-bottom: 10%;
+            }
+
+            p {
+                margin-bottom: 10%;
+            }
+        }
+    }
+
+    .Wlsright-section-sm {
+        display: none;
+
+        h1 {
+            display: none;
+
+        }
+
+        p {
+            display: none;
+
+        }
+
+        .WlearnSection-btn-sm {
+            display: none;
+
+            width: 100%;
+
+            .btn-sm {
+                display: none;
+
+                margin-right : 30%;
+                background   : none;
+                border       : none;
+                border-radius: 0%;
+                border-bottom: 2px solid $color-bg;
+            }
+        }
+
+    }
+
+    .portfolioSection {
         height          : 100vh;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
@@ -1195,20 +1474,20 @@ b {
         }
     }
 
-    .thirdPage-first-row {
+    .portfolioSection-first-row {
         width : 100%;
         height: 33.33%;
     }
 
 
-    .thirdPage-second-row {
+    .portfolioSection-second-row {
         width : 100%;
         height: 33.33%;
     }
 
 
 
-    .thirdPage-third-row {
+    .portfolioSection-third-row {
         width : 100%;
         height: 33.33%;
     }
