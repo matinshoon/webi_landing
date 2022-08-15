@@ -27,6 +27,21 @@ body {
     text-align      : right;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    .footer-social {
+        width: 10%;
+        margin-top: 1%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 b {
     font-family: "Yekan Bakh Bold" !important;
 }
@@ -67,6 +82,24 @@ b {
     text-align: center;
 }
 
+.hover-transition {
+    cursor: pointer;
+
+    &:hover {
+        background-image: none;
+        background      : #fff;
+        text-shadow     : $color-text 10px;
+        transition      : 500ms;
+        text-decoration : none;
+        color           : $color-primary;
+
+        path {
+            fill: $color-primary;
+        }
+
+    }
+}
+
 // /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 375px) and (max-width: 600px) {
 
@@ -103,7 +136,7 @@ b {
         background-position: 100% 100%;
         height             : 200vh;
         /* Fallback for browsers that do not support Custom Properties */
-        height             : calc(var(--vh, 1vh) * 200);
+        height             : calc(var(--vh, 1vh) * 100);
     }
 
     header {
@@ -506,7 +539,45 @@ b {
         width : 100%;
         height: 33.33%;
     }
+
+    .wcheck-page {
+        flex-direction: column !important;
+    }
+
+    .wcheck-page-pic {
+        height          : 50%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+        .webi-check-iphone {
+            position: relative;
+            z-index: -1;
+            top: 30px;
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+        .pink-circle {
+            display: none;
+        }
+        .pink-cube {
+            display: none;
+        }
+    }
+
+    .wcheck-page-text {
+        padding-top: 200px;
+        padding-bottom: 100px;
+        height          : 50%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+        .wcheck-info {
+            width: 70%;
+            h3 {
+                margin-bottom: 10%;
+            }
+        }
+    }
 }
+
 
 // /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -545,7 +616,7 @@ b {
         background-position: 100% 100%;
         height             : 100vh;
         /* Fallback for browsers that do not support Custom Properties */
-        height             : calc(var(--vh, 1vh) * 200);
+        height             : calc(var(--vh, 1vh) * 100);
     }
 
     header {
@@ -937,12 +1008,47 @@ b {
         width : 100%;
         height: 33.33%;
     }
+
+    .wcheck-page {
+        flex-direction: column !important;
+    }
+
+    .wcheck-page-pic {
+        height          : 50%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+        .webi-check-iphone {
+            position: relative;
+            z-index: -1;
+            top: 70px;
+        }
+        .pink-circle {
+            display: none;
+        }
+        .pink-cube {
+            display: none;
+        }
+    }
+
+    .wcheck-page-text {
+        padding-bottom: 100px;
+        height          : 50%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+        .wcheck-info {
+            margin-top: 15%;
+            width: 70%;
+            h3 {
+                margin-bottom: 10%;
+            }
+        }
+    }
 }
 
 // /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 993px) {
     h1 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     h2 {
@@ -954,7 +1060,7 @@ b {
     }
 
     p {
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
 
     a {
@@ -973,6 +1079,10 @@ b {
         height          : 100vh;
         padding-left    : 6%;
         background-image: url("../css/images/lg-blured-circle.png");
+    }
+
+    .no-bg {
+        background-image: none !important;
     }
 
 
@@ -1491,4 +1601,107 @@ b {
         width : 100%;
         height: 33.33%;
     }
+
+    .jobSection {
+        height: 100%;
+        width : 100%;
+
+        .jobs-filters {
+            padding-top    : 10%;
+            cursor         : pointer;
+            color          : $color-text;
+            text-decoration: none;
+
+            .line {
+                width : 40px;
+                height: 0px;
+                border: 1px solid $color-text;
+            }
+
+            &:hover {
+                .line {
+                    transition: 500ms;
+                    width     : 60px;
+                }
+            }
+        }
+
+        .jobs-top-section {
+            border: 0.01px solid #ffffff12;
+            width : 100%;
+            height: 25%;
+
+            div {
+                border: 0.01px solid #ffffff12;
+                width : 33.33%;
+                height: 100%;
+            }
+        }
+
+        .jobs-middle-section {
+            border: 0.01px solid #ffffff12;
+            width : 100%;
+            height: 50%;
+
+            div {
+                width : 33.33%;
+                height: 100%;
+
+                div {
+                    border: 0.01px solid #ffffff12;
+                    height: 50%;
+                    width : 100%;
+                }
+            }
+        }
+
+        .jobs-bottom-section {
+            border: 0.01px solid #ffffff12;
+            width : 100%;
+            height: 25%;
+
+            div {
+                border: 0.01px solid #ffffff12;
+                width : 33.33%;
+                height: 100%;
+            }
+        }
+    }
+
+    .wcheck-page-pic {
+        height          : 100%;
+        width           : 50%;
+        background-image: url("../css/images/blured-bg.png");
+        .webi-check-iphone {
+            position:absolute;
+            z-index: 2;
+
+        }
+        .pink-circle {
+            z-index: 1;
+            width: 200px;
+            position:absolute;
+            top: 50px;
+            left: 250px;
+        }
+        .pink-cube {
+            z-index: 3;
+            position:absolute;
+            bottom: 50px;
+            left: 550px;
+        }
+    }
+
+    .wcheck-page-text {
+        height          : 100%;
+        width           : 50%;
+        background-image: url("../css/images/blured-bg.png");
+        .wcheck-info {
+            width: 70%;
+            h3 {
+                margin-bottom: 10%;
+            }
+        }
+    }
+
 }
