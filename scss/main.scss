@@ -28,21 +28,22 @@ body {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 100%;
+    align-items    : center;
+    height         : 150px;
+    width          : 100%;
+
     .footer-social {
-        width: 10%;
-        margin-top: 1%;
-        display: flex;
+        width          : 10%;
+        margin-bottom  : 1%;
+        display        : flex;
         justify-content: space-around;
     }
 }
 
-b {
+.bold {
     font-family: "Yekan Bakh Bold" !important;
 }
 
@@ -100,8 +101,12 @@ b {
     }
 }
 
-// /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 375px) and (max-width: 600px) {
+.border {
+    border: 0.01px solid #ffffff12 !important;
+}
+
+// /* Small (sm) devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 375px) and (max-width: 576px) {
 
     h1 {
         font-size: 10vw;
@@ -307,6 +312,42 @@ b {
 
 
             }
+        }
+    }
+
+    .serviceSection {
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+
+    }
+
+    .ss-title-row {
+        width : 100%;
+        height: 10%;
+    }
+
+    .ss-first-row {
+        width    : 100%;
+        height   : 45%;
+        flex-wrap: wrap;
+
+        div {
+            width    : 50%;
+            flex     : 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    .ss-second-row {
+        width : 100%;
+        height: 45%;
+        flex-wrap: wrap;
+
+        div {
+            width    : 50%;
+            flex     : 0 0 50%;
+            max-width: 50%;
         }
     }
 
@@ -548,29 +589,34 @@ b {
         height          : 50%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
+
         .webi-check-iphone {
-            position: relative;
-            z-index: -1;
-            top: 30px;
-            max-width: 200px;
+            position     : relative;
+            z-index      : -1;
+            top          : 30px;
+            max-width    : 200px;
             margin-bottom: 10px;
         }
+
         .pink-circle {
             display: none;
         }
+
         .pink-cube {
             display: none;
         }
     }
 
     .wcheck-page-text {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top     : 200px;
+        padding-bottom  : 100px;
         height          : 50%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
+
         .wcheck-info {
             width: 70%;
+
             h3 {
                 margin-bottom: 10%;
             }
@@ -579,8 +625,8 @@ b {
 }
 
 
-// /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 601px) and (max-width: 992px) {
+// /* Medium (md) devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
 
     h1 {
         font-size: 10vw;
@@ -617,6 +663,10 @@ b {
         height             : 100vh;
         /* Fallback for browsers that do not support Custom Properties */
         height             : calc(var(--vh, 1vh) * 100);
+    }
+
+    .container-fluid {
+        height: 100% !important;
     }
 
     header {
@@ -791,9 +841,45 @@ b {
         }
     }
 
+    .serviceSection {
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+
+    }
+
+    .ss-title-row {
+        width : 100%;
+        height: 10%;
+    }
+
+    .ss-first-row {
+        width    : 100%;
+        height   : 45%;
+        flex-wrap: wrap;
+
+        div {
+            width    : 50%;
+            flex     : 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    .ss-second-row {
+        width : 100%;
+        height: 45%;
+        flex-wrap: wrap;
+
+        div {
+            width    : 50%;
+            flex     : 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
     // webi check section 
     .WcheckSection {
-        height          : 70%;
+        height          : 100%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
     }
@@ -802,7 +888,7 @@ b {
         width            : 100%;
         height           : 100%;
         background-image : url("../css/images/white-bg.png");
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size  : cover;
 
         .WcsBG {
@@ -873,7 +959,7 @@ b {
 
 
     .WlearnSection {
-        height          : 70%;
+        height          : 100%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
     }
@@ -1017,27 +1103,32 @@ b {
         height          : 50%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
+
         .webi-check-iphone {
             position: relative;
-            z-index: -1;
-            top: 70px;
+            z-index : -1;
+            top     : 70px;
         }
+
         .pink-circle {
             display: none;
         }
+
         .pink-cube {
             display: none;
         }
     }
 
     .wcheck-page-text {
-        padding-bottom: 100px;
+        padding-bottom  : 100px;
         height          : 50%;
         width           : 100%;
         background-image: url("../css/images/blured-bg.png");
+
         .wcheck-info {
             margin-top: 15%;
-            width: 70%;
+            width     : 70%;
+
             h3 {
                 margin-bottom: 10%;
             }
@@ -1045,8 +1136,8 @@ b {
     }
 }
 
-// /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 993px) {
+// /* Large (lg,xl,xxl) devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 769px) {
     h1 {
         font-size: 4vw;
     }
@@ -1076,9 +1167,34 @@ b {
     }
 
     section {
-        height          : 100vh;
-        padding-left    : 6%;
-        background-image: url("../css/images/lg-blured-circle.png");
+        height      : 100vh;
+        padding-left: 6%;
+
+        .bg-cicle {
+            background-image : url("../css/images/lg-blured-circle.png");
+            -webkit-animation: action 2s infinite alternate;
+            animation        : action 2s infinite alternate;
+
+            @-webkit-keyframes action {
+                0% {
+                    transform: translateY(-50px);
+                }
+
+                100% {
+                    transform: translateY(50px);
+                }
+            }
+
+            @keyframes action {
+                0% {
+                    transform: translateY(-50px);
+                }
+
+                100% {
+                    transform: translateY(50px);
+                }
+            }
+        }
     }
 
     .no-bg {
@@ -1289,6 +1405,28 @@ b {
         }
     }
 
+    .serviceSection {
+        height          : 100%;
+        width           : 100%;
+        background-image: url("../css/images/blured-bg.png");
+
+    }
+
+    .ss-title-row {
+        width : 100%;
+        height: 10%;
+    }
+
+    .ss-first-row {
+        width : 100%;
+        height: 45%;
+    }
+
+    .ss-second-row {
+        width : 100%;
+        height: 45%;
+    }
+
     .gg-corner {
         height  : 0px;
         position: sticky;
@@ -1482,7 +1620,10 @@ b {
     }
 
     .Wlsright-section {
-        width: 40%;
+        width            : 40%;
+        background-image : url("../css/images/lg-blured-circle.png");
+        background-size  : cover;
+        background-repeat: no-repeat;
 
         .centerlize {
             width          : 100%;
@@ -1603,8 +1744,12 @@ b {
     }
 
     .jobSection {
-        height: 100%;
-        width : 100%;
+        height             : 100%;
+        width              : 100%;
+        background-image   : url("../css/images/lg-blured-circle.png");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: 50% 50%;
 
         .jobs-filters {
             padding-top    : 10%;
@@ -1672,23 +1817,70 @@ b {
         height          : 100%;
         width           : 50%;
         background-image: url("../css/images/blured-bg.png");
+
         .webi-check-iphone {
-            position:absolute;
-            z-index: 2;
+            position: absolute;
+            z-index : 2;
 
         }
+
         .pink-circle {
-            z-index: 1;
-            width: 200px;
-            position:absolute;
-            top: 50px;
-            left: 250px;
+            z-index          : 1;
+            width            : 200px;
+            position         : absolute;
+            top              : 50px;
+            left             : 250px;
+            -webkit-animation: action 4s infinite alternate;
+            animation        : action 4s infinite alternate;
+
+            @-webkit-keyframes action {
+                0% {
+                    transform: translateY(-50px);
+                }
+
+                100% {
+                    transform: translateY(50px);
+                }
+            }
+
+            @keyframes action {
+                0% {
+                    transform: translateY(-50px);
+                }
+
+                100% {
+                    transform: translateY(50px);
+                }
+            }
         }
+
         .pink-cube {
-            z-index: 3;
-            position:absolute;
-            bottom: 50px;
-            left: 550px;
+            z-index          : 3;
+            position         : absolute;
+            bottom           : 50px;
+            left             : 550px;
+            -webkit-animation: action 2s infinite alternate;
+            animation        : action 2s infinite alternate;
+
+            @-webkit-keyframes action {
+                0% {
+                    transform: translateY(-30px);
+                }
+
+                100% {
+                    transform: translateY(30px);
+                }
+            }
+
+            @keyframes action {
+                0% {
+                    transform: translateY(-30px);
+                }
+
+                100% {
+                    transform: translateY(30px);
+                }
+            }
         }
     }
 
@@ -1696,8 +1888,10 @@ b {
         height          : 100%;
         width           : 50%;
         background-image: url("../css/images/blured-bg.png");
+
         .wcheck-info {
             width: 70%;
+
             h3 {
                 margin-bottom: 10%;
             }
