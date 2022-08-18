@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home//home/samdiese/newebi
+    - /bin/cp -R webi_landing $DEPLOYPATH
